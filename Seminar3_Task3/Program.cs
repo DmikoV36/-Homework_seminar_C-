@@ -1,9 +1,20 @@
 ﻿void CubeValue (int n)
 {
-    for (int i = 1; i <= Math.Abs(n); i++)
+    if (n < 0)
     {
-        Console.Write(Math.Pow(i, 3) + " ");
+       for (int i = -1; i >= n; i--)
+        {
+            Console.Write(Math.Pow(i, 3) + " ");
+        } 
     }
+    else if (n > 0)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            Console.Write(Math.Pow(i, 3) + " ");
+        }
+    }
+    
 }
 
 Console.WriteLine("Введите число");
